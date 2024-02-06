@@ -1,0 +1,158 @@
+.form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin: 20px 0;
+
+  @media (min-width: 47.97em) {
+    width: 47%;
+    gap: 15px;
+  }
+
+  @media (min-width: 64em) {
+    width: 35vw;
+    margin: 20px auto 0;
+    padding: 10px 35px 10px 10px;
+
+    gap: 20px;
+
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 var(--color-blue);
+  }
+
+  @media (min-width: 100em) {
+    padding: 20px 45px 20px 20px;
+  }
+}
+
+.form__wrapper {
+  display: grid;
+  gap: 10px;
+
+  position: relative;
+
+  input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px var(--color-blue);
+    background-color: #ffffff;
+
+    font-size: 1em;
+  }
+
+  button {
+    cursor: pointer;
+    background: url("/prompt.svg") 0 100% no-repeat;
+    width: 24px;
+    height: 24px;
+    border: none;
+
+    justify-self: end;
+
+    @media (min-width: 47.97em) {
+      background: url("/prompt.svg") 0 100% no-repeat;
+
+      width: 24px;
+      height: 24px;
+      border: none;
+
+      position: absolute;
+      top: 40px;
+      right: -30px;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+
+    @media (min-width: 47.97em) {
+      width: 100%;
+      padding: 10px 20px;
+
+      position: absolute;
+      bottom: 0;
+      left: 111%;
+
+      box-shadow: 0 0 9px 1px var(--color-blue);
+    }
+
+    @media (min-width: 64em) {
+      width: 25vw;
+      bottom: -89%;
+      left: 115%;
+    }
+  }
+}
+
+.form__eye {
+  cursor: pointer;
+
+  position: absolute;
+  right: 8px;
+  top: 36px;
+}
+
+.form__button {
+  display: block;
+  border: none;
+
+  border-radius: 5px;
+  padding: 10px;
+  background-color: var(--color-default-white);
+
+  box-shadow: 0 0 0 1px var(--color-blue);
+
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 1s;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color-blue);
+      transition: background-color 1s;
+    }
+  }
+
+  &:disabled {
+    background-color: var(--color-blue);
+    opacity: 0.5;
+
+    cursor: auto;
+
+    &:hover {
+      background-color: var(--color-blue);
+    }
+  }
+}
+
+.form__error {
+  background-color: #ee9a9a;
+  padding: 20px;
+}
+
+.form__link {
+  display: block;
+  border: none;
+
+  border-radius: 5px;
+  padding: 10px;
+  background-color: var(--color-default-white);
+
+  box-shadow: 0 0 0 1px var(--color-blue);
+
+  cursor: pointer;
+  transition: background-color 1s;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color-blue);
+      transition: background-color 1s;
+    }
+  }
+}

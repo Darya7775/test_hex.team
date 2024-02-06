@@ -1,0 +1,15 @@
+.sort {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    grid-area: 8px;
+  }
+
+  @media(max-width: 33.7em) {
+    grid-template-columns: 1fr;
+  }
+}
